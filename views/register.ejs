@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body class="px-2 bg-gray-100">
+<%- include('partials/navbar', { page: '/register' }) %>
+
+<div class="card bg-base-200 max-w-[700px] mx-auto p-5 mt-6">
+
+<% if(typeof successMessage !== 'undefined'){ %>
+    <div class="alert">
+        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24
+        24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9
+        0 0118 0z" /></svg>
+        <span><%= successMessage %></span>
+        </div><br />
+        <a href="/login" class="btn btn-success">
+        Proceed to Log in
+        </a>
+</div><br/>
+<a href="/login" class="btn btn-success">Proceed to Log in</a>
+<% } else { %>
+
+<form method="POST" action="/register">
+  <div class="grid grid-cols-1 gap-3">
+
+    <div class="form-control">
+      <label class="label">
+        <span class="label-text">User Name</span>
+      </label>
+      <input type="text" name="userName" required placeholder="Type here" class="input input-bordered"
+      value="<%= typeof userName !== 'undefined' ? userName : '' %>"/>
+    </div>
+
+    <div class="form-control">
+      <label class="label">
+        <span class="label-text">Password</span>
+      </label>
+      <input type="password" name="password" required placeholder="Type here" class="input input-bordered"/>
+    </div>
+
+    <div class="form-control">
+      <label class="label">
+        <span class="label-text">Confirm Password</span>
+      </label>
+      <input type="password" name="password2" required placeholder="Type here" class="input input-bordered"/>
+    </div>
+
+    <div class="form-control">
+      <label class="label">
+        <span class="label-text">Email Address</span>
+      </label>
+      <input type="email" name="email" required placeholder="Type here" class="input input-bordered"/>
+    </div>
+
+    <div class="form-control mt-6">
+      <button class="btn btn-primary">Register</button>
+    </div>
+
+  </div>
+</form>
+
+<% } %>
+
+<% if(typeof errorMessage !== 'undefined'){ %>
+    <div class="alert alert-error">
+        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24
+        24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-
+        2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        <span><%= errorMessage %></span>
+        </div>
+<% } %>
+
+</div>
+</body>
+</html>
