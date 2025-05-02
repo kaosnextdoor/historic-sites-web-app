@@ -3,7 +3,7 @@ A full-stack web application that lets users explore, filter, and learn about Ca
 
 > `Node.js` • `Express` • `MongoDB` • `Tailwind CSS` • `DaisyUI` 
 🔗 https://assignments-web.vercel.app
-> [View Code](https://github.com/kaossnextdoor/historic-sites-web-app)
+> [View Code](https://github.com/kaosnextdoor/historic-sites-web-app)
 
 **Key Features:**  
 - Secure user authentication with login history tracking  
