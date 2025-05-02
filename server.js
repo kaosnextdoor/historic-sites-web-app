@@ -104,7 +104,7 @@ app.get("/editSite/:id", ensureLogin, (req, res) => {
         })
         .catch(err => {
           res.status(404).render("404", { message: err });
-        });
+        }); // catch error
     })
     .catch(err => {
       res.status(404).render("404", { message: err });
