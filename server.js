@@ -1,16 +1,3 @@
-/*********************************************************************************
-* WEB322 – Assignment 06
-*
-* I declare that this assignment is my own work in accordance with Seneca's
-* Academic Integrity Policy:
-*
-* https://www.senecacollege.ca/about/policies/academic-integrity-policy.html
-*
-* Name: _____Aliyah Ighodaro_________________ Student ID: __140961236____________ Date: ___April 12, 2025___________
-*
-* Published (web app) URL: https://assignments-web.vercel.app
-*
-********************************************************************************/
 const siteData = require("./modules/data-service");
 const authData = require("./modules/auth-service");
 const express = require("express")
